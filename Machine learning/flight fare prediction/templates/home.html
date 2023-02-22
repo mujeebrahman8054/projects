@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>flight fare prediction</title>
+    </head>
+    <style>
+        .div1{
+            height: 80px;
+            width: 100%;
+            background-color: cornflowerblue;
+        }
+        .div2{
+            width: 100%;
+            height: 100%;
+            background-color: gold;
+        }
+    </style>
+    <body>
+        <div class="div1">
+          <h1>FLIGHT FARE PREDICTION</h1>
+        </div>
+        <div class="div2">
+            <form action="{{url_for('predict')}}" method="POST">
+              <h2>Flight Fare Prediction</h2>
+              <label for="date">Date of Journey :</label>
+              <label for="day">Day</label>
+              <input type="number" id="day" name="day">
+              <label for="month">Month</label>
+              <input type="number" id="month" name="month">
+              <label for="year">Year</label>
+              <input type="number" id="year" name="year"><br><br>
+              <label for="airline">Airline</label>
+              <select name="airline" id="airline">
+                <option value=0>Air Asia</option>
+                <option value=1>Air India</option>
+                <option value=2>GoAir</option>
+                <option value=3>Indigo</option>
+                <option value=4>Jet Airways</option>
+                <option value=5>Multiple Carriers</option>
+                <option value=6>Spicejet</option>
+                <option value=7>Vistara</option>
+                <option value=8>Vistara premium</option>
+              </select><br><br>
+              <label for="source">Source</label>
+              <select name="source" id="source">
+                <option value=0>Banglore</option>
+                <option value=1>Chennai</option>
+                <option value=2>Delhi</option>
+                <option value=3>Kolkata</option>
+                <option value=4>Mumbai</option>
+              </select><br><br>
+              <label for="destination">Destination</label>
+              <select name="destination" id="destination">
+                <option value=0>Banglore</option>
+                <option value=1>Cochin</option>
+                <option value=2>Delhi</option>
+                <option value=3>hyderabad</option>
+                <option value=4>Kolkata</option>
+                <option value=5>New Delhi</option>
+              </select><br><br>
+              <label for="dtime">Departure time  :</label>
+              <label for="hour">Hour</label>
+              <input type="number" id="hour" name="hour">
+              <label for="min">Min</label>
+              <input type="number" id="min" name="min"><br><br>
+              <label for="atime">Arrival time  :</label>
+              <label for="hor">Hour</label>
+              <input type="number" id="hor" name="hor">
+              <label for="minn">Min</label>
+              <input type="number" id="minn" name="minn"><br><br>
+              <label for="stops">Total Stop</label>
+              <select name="stops" id="stops">
+                <option value=0>Non stop</option>
+                <option value=1>1 stop</option>
+                <option value=2>2 stop</option>
+                <option value=3>3 stop</option>
+                <option value=4>4 stop</option>
+              </select><br><br>
+              <input type="submit" value="submit">  
+            </form>
+        </div>
+    </body>
+</html>

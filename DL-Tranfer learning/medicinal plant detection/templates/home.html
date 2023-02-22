@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>house price prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       
+    </head>
+    <style>
+        .formdiv{
+            height: 100%;
+            width: 100%;
+            background-image: url('../static/images/backleaf.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form{
+            margin-top: 40px;
+            border: 1px solid white;
+            border-radius: 10px;
+
+        }
+        .subdiv{
+            height: 20%;
+            width: 25%;
+            margin-left: 35%;
+            margin-top: 6%;
+        }
+        .w3-container{
+            padding-left: 35%;
+            padding-top: 30px;
+        }
+    </style>
+    <body>
+        <div class="formdiv">
+            <h1 align="center" style="padding-top:20px ;color: white;">MEDICINAL PLANT PREDICTION</h1>
+            <div class="subdiv">
+    
+            <form align="center" method="post" action="/upload_video" enctype="multipart/form-data">
+                <h2 style="color: white;">Upload Leaf Image</h2>
+                <dl>
+                    <p>
+                        <input type="file" name="file" autocomplete="off" required>
+                    </p>
+                </dl>
+                <p>
+                    <input type="submit" value="Upload">
+                </p>
+                
+            </form>
+            </div>
+            
+            <!-- <div  class="col-sm" style="margin-bottom:23px;padding: left 30px;">
+                
+                <-- <span  class="border border-primary"> -->
+                    <!-- x={{path}} -->
+                    
+                    <!-- <img src={{path}} style="width:200px;height:200px;"> -->
+                <!-- </span> -->
+                
+            <!-- </div> -->
+            <div class="w3-container">
+                
+              
+                <!-- <p>w3-round-small:</p> -->
+                <img src={{path}} class="w3-round-xxlarge" style="width:30%">
+                <p  style="padding-top: 0%; font-size:30px;color: rgb(255, 255, 255);"> {{out}}</p>
+        </div>
+        </body>
+        
+        
+</html>
