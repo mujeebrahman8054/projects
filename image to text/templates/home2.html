@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Image to Text Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+    .maindiv {
+        float: right;
+        width: 100%;
+
+    }
+
+    .div1 {
+        float: left;
+        min-height: 100%;
+        width: 60%;
+        background-image: url('../static/img3.png');
+        background-position: center;
+    }
+
+    .formdiv {
+        float: right;
+        /* height: 100%; */
+        min-height: 100%;
+        width: 40%;
+        background-image: url('../static/ppp.jpeg');
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    form {
+        margin-top: 40px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-left: 20%;
+        width: 100%;
+
+    }
+
+        .subdiv {
+            height: 20%;
+            width: 50%;
+            margin-left: 20%;
+            margin-top: 6%;
+        }
+
+        .w3-container {
+            padding-left: 5%;
+            padding-top: 30px;
+        }
+</style>
+
+<body>
+    <div class="maindiv">
+        <div class="div1">
+            <!-- <h1>Image To Text Converter</h1> -->
+        </div>
+        <div class="formdiv">
+            <h1 align="center" style="padding-top:20px ;color: white;">Image to Text Converter</h1>
+            <div class="subdiv">
+
+                <form align="center" method="post" action="/imgtotxt" enctype="multipart/form-data">
+                    <h3 style="color: white;">Upload Image</h3>
+                    <dl>
+                        <p>
+                            <input type="file" name="file" autocomplete="off">
+                        </p>
+                    </dl>
+                    <p>
+                        <input type="submit" value="Upload">
+                    </p>
+
+                
+                <div class="w3-container">
+                    <textarea cols="25" rows="5">{{out}}</textarea>
+                </div>
+                <p>
+                    <input style="margin-left: 40%;" type="submit" name="speek" value="Speak">
+                </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
